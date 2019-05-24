@@ -13151,7 +13151,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13268,7 +13268,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_records</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -13280,7 +13280,7 @@ div#notebook {
 <span class="n">n_at_most_50k</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO: Percentage of individuals whose income is more than $50,000</span>
-<span class="n">greater_percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_greater_50k</span><span class="o">/</span><span class="n">n_records</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">greater_percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_at_most_50k</span><span class="o">/</span><span class="n">n_records</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 
 <span class="c1"># Print the results</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total number of records: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_records</span><span class="p">))</span>
@@ -13306,7 +13306,7 @@ div#notebook {
 <pre>Total number of records: 45222
 Individuals making more than $50,000: 34014
 Individuals making at most $50,000: 11208
-Percentage of individuals making more than $50,000: 75.21560302507629%
+Percentage of individuals making more than $50,000: 24.78439697492371%
 </pre>
 </div>
 </div>
@@ -14241,6 +14241,17 @@ By comparison for instance the SVM model overfitts on the small 1% dataset and s
 You can imagine the GradientBoosting Classifier as an organization processing a Purchase order for instance.
 In order for the Manager to sign off, s/he would need to consult with the Finance manager and Purchasing manager to approve budget and quanity/ price respectively.
 In your case that classfier is a bunch of small specialized classifers that can predict the outcome based on age of the donor, gener, income,marital status ...etc.</p>
+<p>The detail behind that we use a ensemble learner type of classifers called GradientBoosting, it combines multiple simple/weak leaners to make a prediction 
+A simple model / weak leaner is a model that does better than random chance.
+The simple model works by constructing a simple decision tree , In decision trees, for predicting a class label for a record we start from the root of the tree. We compare the values of the root attribute with record’s attribute. On the basis of comparison, we follow the branch corresponding to that value and jump to the next node.</p>
+<p>We continue comparing our record’s attribute values with other internal nodes of the tree until we reach a leaf node with predicted class value.[1]</p>
+<p>Gradient boosting involves three elements:</p>
+<p>A loss function to be optimized.
+A weak learner to make predictions.
+An additive model to add weak learners to minimize the loss function.[2]</p>
+<p>Predictions are made by majority vote of the weak learners’ predictions, weighted by their individual accuracy.[2]</p>
+<p>[1] <a href="http://dataaspirant.com/2017/01/30/how-decision-tree-algorithm-works/">http://dataaspirant.com/2017/01/30/how-decision-tree-algorithm-works/</a></p>
+<p>[2] <a href="https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/">https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/</a></p>
 
 </div>
 </div>
