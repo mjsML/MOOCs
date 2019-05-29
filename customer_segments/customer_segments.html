@@ -13162,7 +13162,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13219,7 +13219,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -13361,7 +13361,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -13487,7 +13487,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -13505,13 +13505,13 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f194a957b70&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f5aaff84668&gt;</pre>
 </div>
 
 </div>
@@ -13575,7 +13575,7 @@ In statistics, there are a lot of different ways to determine if a data point is
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
@@ -13651,7 +13651,7 @@ Below is a code snippet to do the analysis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">score</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -13660,7 +13660,7 @@ Below is a code snippet to do the analysis</p>
         
     <span class="k">if</span> <span class="n">v</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">v</span><span class="o">&lt;=</span><span class="mf">0.2</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For&quot;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;, the model finds it harder to infer data from this feature.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For&quot;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;, the model finds it harder to predit this feature using the data.&quot;</span><span class="p">)</span>
         
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For&quot;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;, the model can use the other features to predict this feature.&quot;</span><span class="p">)</span>
@@ -13681,7 +13681,7 @@ Below is a code snippet to do the analysis</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>For Fresh , the model fails to fit the data.
-For Milk , the model finds it harder to infer data from this feature.
+For Milk , the model finds it harder to predit this feature using the data.
 For Grocery , the model can use the other features to predict this feature.
 For Frozen , the model fails to fit the data.
 For Detergents_Paper , the model can use the other features to predict this feature.
