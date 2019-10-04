@@ -29,26 +29,21 @@ class Actor:
         # Define input layer (states)
         states = layers.Input(shape=(self.state_size,), name='states')
 
-        # Add hidden layers
-        #net = layers.Dense(units=32, activation='relu')(states)
-        #net = layers.Dense(units=64, activation='relu')(net)
-        #net = layers.Dense(units=32, activation='relu')(net)
         
-        net = layers.Dense(units=512, kernel_regularizer=regularizers.l2(0.01))(states)
+        net = layers.Dense(units=1024, kernel_regularizer=regularizers.l2(0.005))(states)
         net = layers.BatchNormalization()(net)
         net = layers.Activation('relu')(net)
-        #net = layers.Dropout(0.2)(net)
+        net = layers.Dropout(0.5)(net)
         
-        net = layers.Dense(units=256, kernel_regularizer=regularizers.l2(0.01))(net)
+        net = layers.Dense(units=512, kernel_regularizer=regularizers.l2(0.005))(net)
         net = layers.BatchNormalization()(net)
         net = layers.Activation('relu')(net)
-        #net = layers.Dropout(0.2)(net)
-        
-        #net = layers.Dense(units=128, kernel_regularizer=regularizers.l2(0.01))(net)
-        #net = layers.BatchNormalization()(net)
-        #net = layers.Activation('relu')(net)
+        net = layers.Dropout(0.5)(net)
 
-        # Try different layer sizes, activations, add batch normalization, regularizers, etc.
+        net = layers.Dense(units=256, kernel_regularizer=regularizers.l2(0.005))(net)
+        net = layers.BatchNormalization()(net)
+        net = layers.Activation('relu')(net)
+        #net = layers.Dropout(0.5)(net)
 
         # Add final output layer with sigmoid activation
         raw_actions = layers.Dense(units=self.action_size, activation='sigmoid',name='raw_actions',
